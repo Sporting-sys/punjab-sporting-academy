@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punjab Sporting Academy </title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b2c4a;--sky:#58b7e3;--yellow:#f6c300;--light:#f4f6f9;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#fff;color:#222;}
+header{background:linear-gradient(90deg,var(--navy),#06203a);position:sticky;top:0;z-index:999;}
+nav{max-width:1300px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;color:#fff;}
+nav h1{font-size:24px;}
+nav ul{display:flex;gap:16px;list-style:none;flex-wrap:wrap;}
+nav ul li a{color:#fff;text-decoration:none;font-size:14px;font-weight:500;}
+nav ul li a:hover{color:var(--yellow);} 
+.hero{min-height:95vh;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('images/hero.jpg') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:20px;}
+.hero h2{font-size:56px;}
+.hero p{font-size:22px;margin:15px auto 30px;max-width:750px;}
+.btn{background:var(--yellow);color:#000;padding:12px 30px;border-radius:30px;text-decoration:none;font-weight:600;border:none;cursor:pointer;}
+.section{padding:80px 20px;}
+.container{max-width:1300px;margin:auto;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;}
+.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.08);} 
+.card img{width:100%;height:320px;   /* increase / decrease as you like */object-fit:cover;object-position:50% 15%;border-radius:16px 16px 0 0;}
+.title{text-align:center;margin-bottom:55px;} 
+.title h2{font-size:38px;color:var(--navy);} 
+.match{background:var(--light);padding:18px 20px;border-radius:14px;display:flex;justify-content:space-between;margin-bottom:14px;} 
+.stat{background:linear-gradient(135deg,var(--navy),#061e36);color:#fff;padding:25px;border-radius:16px;text-align:center;} 
+#countdown{position:fixed;bottom:20px;right:20px;background:var(--yellow);padding:14px 22px;border-radius:30px;font-weight:700;} 
+#admin{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);z-index:9999;overflow:auto;} 
+.admin-box{background:#fff;max-width:540px;margin:80px auto;padding:28px;border-radius:16px;} 
+footer{background:#061e36;color:#fff;padding:60px 20px;} 
+</style>
+</head>
+<body>
+
+<!-- ===== Dynamic Hero Section END ===== -->
+<header>
+<nav>
+<h1>Punjab Sporting</h1>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#who-we-are">About</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#fixtures">Fixtures</a></li>
+<li><a href="#team">Staff</a></li>
+<li><a href="#players">Players</a></li>
+<li><a href="#academy">Registration</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="home" class="hero"><div><h2>Punjab Sporting Academy</h2><p>Professional
+Structured coaching, elite environment, and real match opportunities for serious players across India.
+<p> • Youth Teams • Professional Pathway</p></p><a href="#academy" class="btn">Join Trials</a></div></section>
+
+<!--STATS-->
+<section class="section"><div class="container grid"><div class="stat"><h2>50+</h2><p>Players</p></div><div class="stat"><h2>9+</h2><p>Trophies</p></div><div class="stat"><h2>70+</h2><p>Matches</p></div><div class="stat"><h2>3+</h2><p>Coaches</p></div></div></section>
+
+<!--PUBLISHES NEWS SECTION-->
+<section id="news" class="section" style="background:var(--light)">
+  <div class="container">
+    <div class="title">
+      <h2>Academy News</h2>
+    </div>
+    <div class="grid" id="newsGrid">
+      <div class="card">
+        <div style="padding:18px">
+          <h3>Manipur Trials Announced</h3>
+          <p>Punjab Sporting will conduct open trials in Manipur this month as part of our youth recruitment drive for upcoming leagues. Selected players will join the academy youth squad.</p>
+          <span style="font-size:12px;color:#999;">Published on Feb 15, 2026 • Trials</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TROPHY CABINET -->
+<section id="trophies" class="section" style="background:var(--light)">
+  <div class="container">
+    <div class="title"><h2>🏆 Trophy Cabinet</h2></div>
+    <div class="trophy-cabinet" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px">
+      <div class="trophy" style="background:#081f36;padding:30px 20px;border-radius:16px;text-align:center;color:#fff;box-shadow:0 0 25px rgba(255,215,0,.45);transition:.4s;position:relative;overflow:hidden">
+        <img src="images/trophy1.jpg" style="width:90px;animation:spin 6s linear infinite;filter:drop-shadow(0 0 10px gold)">
+        <span style="display:block;margin-top:10px;font-weight:700;color:#f6c300">National Youth State Champions Goa</span>
+        <div class="popup" style="position:absolute;bottom:-100%;left:0;width:100%;background:#000;padding:12px;font-size:13px;transition:.4s">2024 – Punjab League</div>
+      </div>
+      <div class="trophy" style="background:#081f36;padding:30px 20px;border-radius:16px;text-align:center;color:#fff;box-shadow:0 0 25px rgba(255,215,0,.45);transition:.4s;position:relative;overflow:hidden">
+        <img src="images/trophy2.jpg" style="width:90px;animation:spin 6s linear infinite;filter:drop-shadow(0 0 10px gold)">
+        <span style="display:block;margin-top:10px;font-weight:700;color:#f6c300">State Champions</span>
+        <div class="popup" style="position:absolute;bottom:-100%;left:0;width:100%;background:#000;padding:12px;font-size:13px;transition:.4s">2023 – AIFF Youth</div>
+      </div>
+      <div class="trophy" style="background:#081f36;padding:30px 20px;border-radius:16px;text-align:center;color:#fff;box-shadow:0 0 25px rgba(255,215,0,.45);transition:.4s;position:relative;overflow:hidden">
+        <img src="images/trophy3.jpg" style="width:90px;animation:spin 6s linear infinite;filter:drop-shadow(0 0 10px gold)">
+        <span style="display:block;margin-top:10px;font-weight:700;color:#f6c300">Elite National Cup</span>
+        <div class="popup" style="position:absolute;bottom:-100%;left:0;width:100%;background:#000;padding:12px;font-size:13px;transition:.4s">2025 – AIFF Elite</div>
+      </div>
+      <div class="trophy" style="background:#081f36;padding:30px 20px;border-radius:16px;text-align:center;color:#fff;box-shadow:0 0 25px rgba(255,215,0,.45);transition:.4s;position:relative;overflow:hidden">
+        <img src="https://cdn-icons-png.flaticon.com/512/2583/2583344.png" style="width:90px;animation:spin 6s linear infinite;filter:drop-shadow(0 0 10px gold)">
+        <span style="display:block;margin-top:10px;font-weight:700;color:#f6c300">International Cup</span>
+        <div class="popup" style="position:absolute;bottom:-100%;left:0;width:100%;background:#000;padding:12px;font-size:13px;transition:.4s">2024 – Dubai Tour</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes spin{from{transform:rotateY(0)}to{transform:rotateY(360deg)}}
+.trophy:hover{transform:scale(1.05)}
+.trophy:hover .popup{bottom:0}
+</style>
+</section>
+
+<!-- TROPHY CABINET -->
+<section id="trophies" class="section"><div class="container"><div class="title"><h2>Achievements</h2></div><div class="grid"><div class="stat"><h2>3+</h2><p>State Championships</p></div><div class="stat"><h2>1</h2><p>National Titles</p></div><div class="stat"><h2>20+</h2><p>Youth Tournaments</p></div><div class="stat"><h2>3+</h2><p>Tours</p></div></div></div></section>
+
+<!-- ACADEMY IDENTITY -->
+<section id="identity" class="section" style="background:var(--light)"><div class="container"><div class="title"><h2>Our Identity</h2></div><div class="grid"><div class="card"><div style="padding:22px"><h3>Mission Statement</h3><p>To develop technically sound, mentally strong, and disciplined footballers by providing world-class coaching, structured development pathways, and a professional football environment.</p></div></div><div class="card"><div style="padding:22px"><h3>Vision Statement</h3><p>To become one of India’s most respected football academies and professional clubs, producing national and international level players who represent excellence, integrity, and sportsmanship.</p></div></div><div class="card"><div style="padding:22px"><h3>Academy Philosophy</h3><p>We believe in long-term player development, intelligent football, tactical discipline, and building character both on and off the pitch.</p></div></div><div class="card"><div style="padding:22px"><h3>Academy Motto</h3>Developing Champions. Creating Legends.</p></p></div></div></div></div></section>
+
+<!-- CORE VALUES -->
+<section id="values" class="section"><div class="container"><div class="title"><h2>Our Core Values</h2></div><div class="grid"><div class="stat"><h3>Discipline</h3><p>Building strong habits and professional behavior.</p></div><div class="stat"><h3>Respect</h3><p>For teammates, opponents, coaches, and the game.</p></div><div class="stat"><h3>Integrity</h3><p>Honesty, ethics, and fairness in everything we do.</p></div><div class="stat"><h3>Excellence</h3><p>Continuous improvement and elite performance.</p></div><div class="stat"><h3>Teamwork</h3><p>Winning together and growing together.</p></div></div></div></section>
+
+<!-- DIRECTOR & GUIDELINES -->
+<section id="director" class="section" style="background:var(--light); padding: 40px 0;">
+  <div class="container" style="display: flex; flex-wrap: wrap;">
+
+    <!-- Image on the left (full height) -->
+    <div style="flex: 1; min-width: 300px; position: relative;">
+      <img src="images/founder.jpg" alt="Founder Punjab Sporting" 
+           style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+    </div>
+
+    <!-- Text content on the right -->
+    <div style="flex: 2; min-width: 300px; padding-left: 30px; font-size: 16px; line-height: 1.8;">
+      <div class="title">
+        <h2>Founder’s Vision Letter</h2>
+      </div>
+
+      <p>Dear Players, Parents, and Supporters,</p>
+      <p>I started Punjab Sporting Academy with one clear purpose: to create a serious pathway for young footballers who want to compete at the highest level.</p>
+      <p>As an active professional footballer, I have experienced the journey from youth football to the professional environment. I understand the pressure players face, the sacrifices families make, and the discipline required to succeed. This academy was built to give players the structure, guidance, and opportunities that every serious footballer needs.</p>
+
+      <ul>
+        <li>Our focus is simple.</li>
+        <li>Develop strong footballers.</li>
+        <li>Build disciplined individuals.</li>
+        <li>Create real match opportunities.</li>
+      </ul>
+
+      <p>We aim to provide professional training standards, competitive exposure, and a culture where hard work, respect, and consistency come first. This is not just a training center. It is a long-term project to help players grow, compete, and move towards professional football.</p>
+      <p>In the coming years, our goal is to compete in youth leagues, development competitions, and national platforms while helping players reach top clubs and higher levels of the game.</p>
+      <p>Thank you to every player and parent who believes in this journey. We are building something strong, step by step.</p>
+      <p><strong>— Founder, Punjab Sporting Academy</strong></p>
+    </div>
+
+  </div>
+</section>
+
+<!--PARENT AND PLAYER GUIDELINES-->
+<section id="guidelines" class="section"><div class="container"><div class="title"><h2>Parent & Player Guidelines</h2></div><div class="grid"><div class="card"><div style="padding:22px"><h3>Player Responsibilities</h3><ul><li>Maintain discipline and punctuality</li><li>Respect coaches, teammates, and opponents</li><li>Attend all training sessions regularly</li><li>Maintain physical fitness and healthy lifestyle</li><li>Uphold sportsmanship on and off the field</li></ul></div></div><div class="card"><div style="padding:22px"><h3>Parent Responsibilities</h3><ul><li>Support and encourage your child positively</li><li>Respect coaching decisions</li><li>Maintain regular communication with academy staff</li><li>Ensure timely fee payments and attendance</li><li>Promote discipline and values at home</li></ul></div></div></div></div></section>
+
+<!--ACADEMY CONSTITUTION-->
+<section id="constitution" class="section" style="background:var(--light)"><div class="container"><div class="title"><h2>Academy Constitution</h2></div><div class="card"><div style="padding:26px"><p><strong>Punjab Sporting Academy Constitution</strong><p><ul><li>Commitment to fair play, integrity, and transparency</li><li>Equal opportunity and non-discrimination policy</li><li>Professional governance and structured development</li><li>Safe training environment for all players</li><li>Compliance with national and international football regulations</li></ul><p>This constitution ensures that Punjab Sporting operates with professionalism, accountability, and long-term vision.</p></div></div></div></section>
+
+<!--MATCH CENTRE-->
+<section id="fixtures" class="section"><div class="container"><div class="title"><h2>Match Centre</h2></div><div class="match"><strong><h3>To be announced </strong></h3><span></span></div></div></section>
+
+<!-- PLAYER PRODUCED BY ACADEMY -->
+<section id="players" class="section"><div class="container"><div class="title"><h2>Players Produced by Academy</h2><p> Representing National Team & Professional Indian Clubs</p></div><div class="grid" id="playerDB"></div></div></section>
+
+<!--COACHING AND MANAGEMENT STAFF-->
+<section id="team" class="section" style="background:var(--light)">
+  <div class="container">
+    <div class="title">
+      <h2>Coaching & Management Staff</h2>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <img src="images/dilpreet.jpg" alt="Dilpreet Singh">
+        <div style="padding:18px">
+          <h3>Dilpreet Singh</h3>
+          <p>Technical Director</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/ashish.jpg" alt="Ashish Kumar Paswan">
+        <div style="padding:18px">
+          <h3>Ashish Kumar Paswan</h3>
+          <p>Head Coach</p>
+          <p>AFC licensed coach</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/sunil.jpg" alt="Sunil Bharti">
+        <div style="padding:18px">
+          <h3>Sunil Bharti</h3>
+          <p>Assistant Coach</p>
+          <p>AFC Licensed Coach</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/malem.jpg" alt="Malemnganba Hawaibam">
+        <div style="padding:18px">
+          <h3>Malemnganba Hawaibam</h3>
+          <p>Fitness Trainer</p>
+          <p>AFC Licensed Coach</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+ 
+ <!--WHO WE ARE--> 
+<section id="who-we-are" class="section" style="background:var(--light)">
+<div class="container">
+<div class="title">
+<h2>Who We Are</h2>
+</div>
+<div class="grid" id="newsGrid">
+<div class="card">
+<div style="padding:18px">
+<p>Punjab Sporting is a high-performance football academy founded in 2024 with a clear purpose: to build fearless, disciplined, and intelligent footballers ready for the professional stage. From day one, the vision has been simple. Create an environment where players are pushed every day, where standards remain high, and where ambition is backed by real work. The academy is led by a professional footballer who understands the journey from grassroots football to national camps. That experience shapes our training, our culture, and the expectations we set for every player who joins us. We know what the game demands, and we prepare our players for those demands with honesty and intensity.</p>
+
+<p>Our approach focuses on strong fundamentals, modern coaching, and a competitive mindset. We develop technical ability, physical strength, tactical awareness, and most importantly, mentality. Players here are trained to compete under pressure, improve consistently, and respect the game. Every session is structured with purpose. Every drill is designed to help players grow. We expect commitment, discipline, and hunger. Players who wear our badge represent a culture that values effort, resilience, and pride. We believe that when the environment is professional and focused, talent grows faster and players gain the confidence to perform on bigger stages. We also focus on character, because strong mentality and professionalism are what separate good players from great ones over time.</p>
+
+<p>Punjab Sporting is open to players from all over India. We already have footballers joining us from different states, backgrounds, and levels, united by the same goal to improve and compete. This academy is not limited to one city or one region. It is a platform for any serious player in India who wants the right environment to grow. Our doors are open to talent that is willing to work, learn, and commit to the process. We believe football development should be accessible to every dedicated player who dreams of reaching higher levels.</p>
+
+<p>In our very first year, we reached a milestone that reflects our ambition and belief. Punjab Sporting proudly produced a player who earned selection for the India Under-17 national team. For a new academy to achieve this so early is a major step forward and a moment we take great pride in. It shows that the pathway we are building is real and that our players can reach national level through the right training, guidance, and exposure. This achievement is not the peak for us. It is a starting point and a responsibility. We aim to continue developing more players who can represent India, earn opportunities at top clubs, and compete at the highest level of the game. We celebrate the milestone, but we stay focused on what comes next.</p>
+
+<p>We carry the identity of the Red Eye Lions. The name represents focus, fire, and a fearless mentality. Red eyes symbolise hunger, determination, and the will to keep pushing when the work gets tough. The lion stands for strength, leadership, and pride. Together, it reflects the attitude we expect from every player who trains here. When you step into our environment, you train with purpose and compete with intensity. We want players who respect the process, trust the work, and fight for improvement every single day.</p>
+
+<p>Punjab Sporting is more than an academy. It is a pathway, a culture, and a long-term vision. We are building step by step, season by season, and player by player. Our goal is to develop complete footballers who can perform with confidence, handle pressure, and represent India with pride. We have started strong, and we continue with the same commitment to growth, opportunity, and excellence. The journey has only begun, and we remain focused on building a future that our players, our community, and our badge can be proud of.</p>
+</div>
+</section>
+
+<section id="our-philosophy" class="section" style="background:var(--light)">
+<div class="container">
+<div class="title">
+<h2>Our Philosophy</h2>
+</div>
+<div class="grid" id="newsGrid">
+<div class="card">
+<div style="padding:18px">
+<p> At Punjab Sporting, our philosophy is built on honesty, discipline, and daily improvement. We believe strong footballers are created through consistent work, not shortcuts. Talent gives a player a start, but mentality, professionalism, and hunger decide how far they go. Every training session is designed to challenge players, raise standards, and prepare them for real match situations. We focus on building complete footballers who are technically sharp, physically strong, tactically aware, and mentally ready for pressure.</p>
+
+<p>We follow a player-first approach. Each player is guided to understand the game, take responsibility for their development, and respect the process. Hard work is non-negotiable. We expect players to show discipline on and off the pitch, respect teammates and coaches, and carry themselves with confidence and humility. Our environment is competitive but supportive. Players are pushed to improve while being given the structure and guidance needed to grow.</p>
+
+<p>Our philosophy also focuses on long-term development. We are not here for quick success or short-term results. We aim to build footballers who can sustain performance, handle setbacks, and keep progressing season after season. We believe in creating opportunities through exposure, competitive matches, and professional standards that prepare players for club and national pathways.</p>
+
+<p>Punjab Sporting is open to players from all over India. No matter where a player comes from, the expectations remain the same: commitment, effort, and respect for the game. We want players who are serious about their future and ready to work for it. Our goal is to develop confident, disciplined footballers who can represent their clubs, their state, and the country with pride.</p>
+</div>
+</section>
+
+<section id="our-story" class="section" style="background:var(--light)">)">
+<div class="container">
+<div class="title">
+<h2>Our Story</h2>
+</div>
+<div class="grid" id="newsGrid">
+<div class="card">
+<div style="padding:10px">
+<p>Punjab Sporting was founded in 2024 with a clear belief: if players are given the right environment, honest coaching, and strong standards, they can reach the highest level of the game. This academy was established by a young professional footballer who is still actively playing and understands the journey closely. He knows the reality of training, competition, pressure, selection, and the challenges players and their families face. Because of this, the academy was built not only to train footballers, but to guide them mentally, professionally, and personally through the demands of the sport.</p>
+
+<p>From the start, the focus was on creating a serious football environment. Strong sessions, clear discipline, and a professional mindset became the foundation. Players began joining from different parts of India with one shared goal: to improve and compete at a higher level. The work was intense and the standards were high. In our very first year, that belief turned into a proud milestone when one of our players earned selection for the India Under-17 national team. For a new academy, this achievement showed that the pathway we are building is real and that our players can reach national level through the right training and support.</p>
+
+<p>Being led by a young professional player gives Punjab Sporting a different energy. We understand the pressure of trials, contracts, expectations from family, and the mental strength required to keep going. We speak to players not only as coaches but as someone who has lived the same journey. We focus on building strong footballers who are confident, disciplined, and mentally prepared for setbacks and success. Players here are pushed to work hard, but they are also supported and guided with honesty.</p>
+
+<p>Punjab Sporting is open to players from all over India. Different states, different backgrounds, one strong purpose. Once you step onto our ground, you become part of a competitive and supportive culture that demands the best from you. Our story is still being written, but the foundation is strong. We are building step by step, helping players grow, creating real opportunities, and developing footballers who can represent their clubs and country with pride.</p>
+
+<p>For partners and investors, Punjab Sporting represents a focused and growing football project. In a short time, the academy has shown its ability to produce national-level talent and attract players nationwide. The long-term vision is to continue developing players, expanding opportunities, and building a strong football structure that delivers results on and off the pitch. This is more than an academy. It is a pathway, a responsibility, and a long-term commitment to the future of Indian football.</p>
+</div>
+</section>
+
+<section id="mission" class="section" style="background:var(--light)">
+<div class="container">
+<div class="title">
+<h2>Mission</h2>
+</div>
+<div class="grid" id="newsGrid">
+<div class="card">
+<div style="padding:10px">
+<p>Our mission is to build disciplined, confident, and high-level footballers who are ready for professional football in India and beyond. At Punjab Sporting, we are creating a serious training environment where players improve daily through strong coaching, competitive sessions, and honest guidance. We focus on developing complete footballers who are technically sharp, physically prepared, tactically aware, and mentally strong enough to handle the pressure of higher-level competition.</p>
+
+<p>We are committed to giving players from all over India a real pathway. Every player who joins us trains under professional standards and is pushed to compete for opportunities at club and national level. We understand the journey closely because the academy is led by a young professional footballer who is still playing. This helps us guide players through pressure, expectations, and the realities of the game while helping them grow stronger mentally and professionally.</p>
+
+<p>In the short term, our mission is to compete in the Youth League and give our players regular exposure at a competitive national level. The next step is to enter development leagues and continue building a strong squad capable of competing in I-League competitions. Step by step, we aim to grow as a club and create a system that allows our players to move into top teams across the country.</p>
+
+<p>Our long-term mission is clear. One day, Punjab Sporting will compete in India’s top league. We want to build a club that represents strong football, strong values, and strong players. At the same time, we aim to help our footballers reach the highest level possible, whether that is with us or with top clubs in India. Everything we do is focused on growth, opportunity, and creating a future where our players and our badge can compete at the very top.</p>
+</div>
+</section>
+
+<section id="vision" class="section" style="background:var(--light)">
+<div class="container">
+<div class="title">
+<h2>Vision</h2>
+<div class="grid" id="newsGrid">
+<div class="card">
+<div style="padding:10px">
+<p>To build Punjab Sporting into a top professional club competing in India’s highest leagues while creating a clear pathway for talented players from across the country to reach national teams and elite competitions. We aim to grow step by step through youth, development, and league football, developing strong footballers and a club that represents discipline, ambition, and pride at the highest level.</p>
+</div>
+</section>
+
+<div style="text-align:center;margin-top:30px">
+  <button class="btn" onclick="openSquad()">View Full Squad</button>
+</div>
+</div></section>
+
+<!-- ACADEMY -->
+<section id="academy" class="section"><div class="container"><div class="title"><h2>Academy Admission & Trial Registration</h2><p>Fill complete details to register for official Punjab Sporting Academy trials.</p></div><form id="academyForm" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px"><input placeholder="Full Name" required><input type="date" placeholder="Date of Birth" required><input placeholder="Age" required><input placeholder="Height (cm)"><input placeholder="Weight (kg)"><input placeholder="Playing Position" required><select required><option value="">Preferred Foot</option><option>Right</option><option>Left</option><option>Both</option></select><input placeholder="Mobile Number" required><input placeholder="Email Address" required><input placeholder="City" required><input placeholder="Previous Club / Academy"><input placeholder="Years of Playing Experience"><select required><option value="">Preferred Trial Date</option><option>20 Feb 2026</option><option>27 Feb 2026</option><option>5 Mar 2026</option></select><select required><option value="">Preferred Time Slot</option><option>6:00 AM – 8:00 AM</option><option>4:00 PM – 6:00 PM</option><option>6:00 PM – 8:00 PM</option></select><input placeholder="Parent / Guardian Name" required><input placeholder="Emergency Contact Number" required><textarea placeholder="Medical Conditions (if any)" style="grid-column:1/-1"></textarea><label style="grid-column:1/-1"><input type="checkbox" required> I confirm that the above information is correct.</label><button class="btn" style="grid-column:1/-1">Submit Trial Registration</button></form></div></section>
+
+<!-- MATCH GALLERY & HIGHLIGHTS -->
+<section id="gallery" class="section" style="background:var(--light)"><div class="container"><div class="title"><h2>Match Gallery & Highlights</h2></div><div class="grid"><div class="card"><img src="images/g1.jpg"><div style="padding:16px"><h3>Highlights</h3><p>Watch match-winning goals & moments</p><a class="btn" href="https://youtube.com/@punjabsportingfa?si=oGOD7wa25qNGV_dS" target="_blank">Watch Video</a></div></div><div class="card"><img src="images/g2.jpg"><div style="padding:16px"><h3>Training Session</h3><p>Inside the academy drills</p></div></div><div class="card"><img src="images/g3.jpg"><div style="padding:16px"><h3>Matchday Atmosphere</h3></div></div></div></div></section>
+
+<!-- ACADEMY HISTORY TIMELINE -->
+<section id="history" class="section" style="background:var(--light)"><div class="container"><div class="title"><h2>Academy History Timeline</h2></div><div class="grid"><div class="card"><div style="padding:20px"><h3>2024 – Foundation</h3><p>Punjab Sporting Academy was founded to nurture grassroots football talent.</p></div></div><div class="card"><div style="padding:20px"><h3>2025 – First State Title</h3><p>Won our first Punjab State Championship.</p></div></div><div class="card"><div style="padding:20px"><h3>2026 – National Recognition</h3><p>Player selected for national camps & ISL youth teams.</p></div></div><div class="card"><div style="padding:20px"><h3>2026 – Academy Status</h3><p>Entering in youth league this season.</p></div></div></div></div></section>
+
+<!-- MEDICAL & PHYSIO -->
+<section id="medical" class="section"><div class="container"><div class="title"><h2>Medical & Physiotherapy Department</h2></div><div class="grid"><div class="card"><div style="padding:22px"><h3>Sports Medicine</h3><p>Professional injury diagnosis, treatment & rehabilitation.</p></div></div><div class="card"><div style="padding:22px"><h3>Physiotherapy</h3><p>Advanced recovery programs, muscle conditioning & injury prevention.</p></div></div><div class="card"><div style="padding:22px"><h3>Fitness & Rehab</h3><p>Personalized training, strength conditioning & recovery protocols.</p></div></div></div></div></section>
+
+<!-- INJURY MANAGEMENT SYSTEM -->
+<section id="injury" class="section" style="background:var(--light)"><div class="container"><div class="title"><h2>Injury Management System</h2></div><div class="grid"><div class="card"><div style="padding:22px"><h3>Injury Reporting</h3><p>Players can report injuries directly to medical team.</p></div></div><div class="card"><div style="padding:22px"><h3>Recovery Tracking</h3><p>Monitor healing stages, rehab exercises & return-to-play timeline.</p></div></div><div class="card"><div style="padding:22px"><h3>Medical Records</h3><p>Secure storage of player health and treatment history.</p></div></div></div></div></section>
+
+<!-- ANTI-DOPING POLICY -->
+<section id="doping" class="section"><div class="container"><div class="title"><h2>Anti-Doping Policy</h2></div><div class="card"><div style="padding:26px"><p>Punjab Sporting Academy strictly follows national and international anti-doping regulations. All players are educated about prohibited substances, supplements, and medical protocols.</p><ul><li>Zero tolerance policy towards banned substances</li><li>Regular education workshops</li><li>Medical clearance for supplements</li><li>Random testing compliance</li><li>Strict disciplinary action for violations</li></ul><p>We promote clean sport, fair play, and ethical competition.</p></div></div></div></section>
+
+<!-- SOCIAL MEDIA HANDLES -->
+<section id="social" class="section" style="background:var(--light)"><div class="container"><div class="title"><h2>Connect With Us</h2></div><div class="grid"><a class="btn" href="https://www.instagram.com/punjabsporting?igsh=MWNuY3BkamJwMGo1dw==" target="_blank">Instagram</a><a class="btn" href="https://www.facebook.com/share/186Tm57YfQ/?mibextid=wwXIfr" target="_blank">Facebook</a><a class="btn" href="https://www.youtube.com/@PunjabSportingFA" target="_blank">YouTube</a><a class="btn" href="https://x.com/punjabsporting?s=21" target="_blank">Twitter / X</a></div></div></section>
+
+<!--FOOTER-->
+<footer>
+  <div class="container">
+    <p>© 2024 Punjab Sporting Academy</p>
+
+    <p style="margin-top:15px;">Contact us:</p>
+    <p>Email: punjabsportingfa@gmail.com</p>
+    <p>Phone: 9896599669</p>
+  </div>
+</footer>
+
+<div id="countdown"></div>
+
+<div id="admin"><div class="admin-box"><h2>Admin Dashboard</h2><input id="newsTitle" placeholder="News Title"><textarea id="newsDesc" placeholder="News Description"></textarea><button class="btn" onclick="addNews()">Publish News</button><br><br><button class="btn" onclick="closeAdmin()">Close Panel</button></div></div>
+
+<script>
+  
+// PLAYER DATABASE
+const players=[
+  {name:'Gurpritam',pos:'Striker',label:'National Team Call-Up 🏅',value:'In our very first year, Gurpritam earned a prestigious call-up to the <strong>India U-17 National Team,</strong> marking a historic milestone for <strong>Punjab Sporting.</strong>',img:'images/gurpritam.jpg'},
+  {name:'Bobby Kaint',pos:'Midfielder',label:'Club Selection ⚽',value:'Bobby Kaint was selected for <strong>Mohun Bagan Super Giant’s Reserve Team,</strong> reflecting his outstanding performance and rapid development.',img:'images/bobby.jpg'},
+];
+
+const pdb = document.getElementById('playerDB');
+
+players.forEach(p=>{
+  pdb.innerHTML += `
+    <div class='card'>
+      <img src='${p.img}'>
+      <div style='padding:18px'>
+        <h3>${p.name}</h3>
+        <p>Position: ${p.pos}</p>
+        <p><strong>${p.label}:</strong> ${p.value}</p>
+      </div>
+    </div>
+  `;
+});
+
+
+// ADMIN NEWS
+let news=[];function addNews(){const t=document.getElementById('newsTitle').value;const d=document.getElementById('newsDesc').value;if(!t||!d)return alert('Fill fields');news.unshift({t,d});renderNews();}
+function renderNews(){const g=document.getElementById('newsGrid');g.innerHTML='';news.forEach(n=>{g.innerHTML+=`<div class='card'><div style='padding:18px'><h3>${n.t}</h3><p>${n.d}</p></div></div>`});}
+
+// ADMIN
+function openAdmin(){document.getElementById('admin').style.display='block';}
+function closeAdmin(){document.getElementById('admin').style.display='none';}
+
+// PAYMENT
+function pay(){alert('Payment gateway integration ready – Razorpay / Stripe / Paytm');}
+
+// FORM + WHATSAPP + EMAIL SIMULATION
+
+document.getElementById('academyForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+
+  function getVal(selector) {
+    const el = form.querySelector(selector);
+    return el && el.value.trim() ? el.value.trim() : null;
+  }
+
+  const data = {
+    Name: getVal('input[placeholder="Full Name"]'),
+    DOB: getVal('input[type="date"]'),
+    Age: getVal('input[placeholder="Age"]'),
+    Height: getVal('input[placeholder="Height (cm)"]'),
+    Weight: getVal('input[placeholder="Weight (kg)"]'),
+    Position: getVal('input[placeholder="Playing Position"]'),
+    Foot: form.querySelectorAll('select')[0]?.value || null,
+    Email: getVal('input[placeholder="Email Address"]'),
+    Mobile: getVal('input[placeholder="Mobile Number"]'),
+    City: getVal('input[placeholder="City"]'),
+    Previous: getVal('input[placeholder="Previous Club / Academy"]'),
+    Experience: getVal('input[placeholder="Years of Playing Experience"]'),
+    Guardian: getVal('input[placeholder="Parent / Guardian Name"]'),
+    Medical: getVal('textarea[placeholder="Medical Conditions (if any)"]'),
+    "Trial Date": form.querySelectorAll('select')[1]?.value || null,
+    "Time Slot": form.querySelectorAll('select')[2]?.value || null
+  };
+
+  let message = "New Trial Registration - Punjab Sporting Academy\n\n";
+
+  for (let key in data) {
+    if (data[key]) {
+      message += key + ": " + data[key] + "\n";
+    }
+  }
+
+  const whatsappNumber = "919896599669";
+  const whatsappURL =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(message);
+
+  // NO BLANK TAB
+  window.location.href = whatsappURL;
+
+  alert("Please tap SEND on WhatsApp to complete registration.");
+
+  form.reset();
+});
+
+</script>
+
+
+
+<!-- ===== Sporty Enhancements START ===== -->
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/919896599669" class="whatsapp-float" target="_blank">💬</a>
+
+<!-- Stats Counter Section -->
+<section class="stats-section">
+  <div class="stat-box"><span class="counter" data-target="150">0</span><p>Players Trained</p></div>
+  <div class="stat-box"><span class="counter" data-target="5">0</span><p>Professional Coaches</p></div>
+  <div class="stat-box"><span class="counter" data-target="2">0</span><p>National Selections</p></div>
+  <div class="stat-box"><span class="counter" data-target="9">0</span><p>Trophies Won</p></div>
+</section>
+
+<style>
+.stats-section{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:70px 10%;background:#071c2f;color:#fff;text-align:center}
+.stat-box{background:#0d2d4d;padding:30px;border-radius:14px;box-shadow:0 0 25px rgba(0,200,255,.25);transition:.3s}
+.stat-box:hover{transform:translateY(-8px)}
+.counter{font-size:42px;font-weight:900;color:#00ffae}
+
+.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;font-size:26px;padding:16px 18px;border-radius:50%;box-shadow:0 0 20px rgba(37,211,102,.8);z-index:9999;text-decoration:none;animation:pulse 1.8s infinite}
+
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.12)}100%{transform:scale(1)}}
+</style>
+
+<script>
+const counters=document.querySelectorAll('.counter');
+counters.forEach(counter=>{const update=()=>{const target=+counter.dataset.target;const c=+counter.innerText;const inc=target/200;if(c<target){counter.innerText=Math.ceil(c+inc);setTimeout(update,15)}else{counter.innerText=target}};update()});
+</script>
+
+<!-- ===== Sporty Enhancements END ===== -->
+
+</body>
+</html>
