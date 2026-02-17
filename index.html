@@ -488,6 +488,11 @@ document.getElementById('academyForm').addEventListener('submit', function (e) {
 </section>
 
 <style>
+.stats-section{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:70px 10%;background:#071c2f;color:#fff;text-align:center}
+.stat-box{background:#0d2d4d;padding:30px;border-radius:14px;box-shadow:0 0 25px rgba(0,200,255,.25);transition:.3s}
+.stat-box:hover{transform:translateY(-8px)}
+.counter{font-size:42px;font-weight:900;color:#00ffae}
+
 .whatsapp-float{ position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;font-size:26px;padding:16px;border-radius:50%;box-shadow:0 0 20px rgba(37,211,102,.8);z-index:9999;text-decoration:none;animation:pulse 1.8s infinite;
 
   display:flex;
