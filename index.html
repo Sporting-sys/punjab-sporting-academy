@@ -33,11 +33,28 @@ nav ul{display:flex;gap:16px;list-style:none;flex-wrap:wrap;}
 nav ul li a{ color:#fff;text-decoration:none;font-size:16px;   /* increased */font-weight:600;  /* bolder */}
 
 nav ul li a:hover{color:var(--yellow);} 
-.hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('./images/hero.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:40px 20px;animation: zoom 10s ease-in-out infinite alternate;
+.hero{
+  min-height:100vh;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  padding:40px 20px;
 }
-@keyframes zoom{
-  from{background-size:100%;}
-  to{background-size:110%;}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    var(--hero-bg) center/cover no-repeat;
+  animation: zoom 12s ease-in-out infinite alternate;
+  transition: background 1s ease-in-out;
+  z-index:-1;
 }
 .hero h2{font-size:56px;}
 .hero p{font-size:22px;margin:15px auto 30px;max-width:750px;}
@@ -653,7 +670,29 @@ document.getElementById('academyForm').addEventListener('submit', function (e) {
 <script>
 const counters=document.querySelectorAll('.counter');
 counters.forEach(counter=>{const update=()=>{const target=+counter.dataset.target;const c=+counter.innerText;const inc=target/200;if(c<target){counter.innerText=Math.ceil(c+inc);setTimeout(update,15)}else{counter.innerText=target}};update()});
+
+<script>
+const heroImages = [
+  "images/hero1.jpg",
+  "images/hero2.jpg",
+  "images/hero3.jpg",
+  "images/hero4.jpg",
+  "images/hero5.jpg",
+  "images/hero6.jpg",
+];
+
+let current = 0;
+const hero = document.querySelector('.hero');
+
+function changeHero() {
+  hero.style.setProperty('--hero-bg', `url(${heroImages[current]})`);
+  current = (current + 1) % heroImages.length;
+}
+
+changeHero();
+setInterval(changeHero, 5000); // change every 5 seconds
 </script>
+
 
 <!-- ===== Sporty Enhancements END ===== -->
 
