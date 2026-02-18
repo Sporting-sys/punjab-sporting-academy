@@ -53,9 +53,14 @@ nav ul li a:hover{color:var(--yellow);}
     linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
     var(--hero-bg) center/cover no-repeat;
   animation: zoom 12s ease-in-out infinite alternate;
-  transition: background 1s ease-in-out;
-  z-index:-1;
+  transition: opacity 1s ease-in-out;
+  z-index:0;
 }
+.hero > div{
+  position:relative;
+  z-index:2;
+}
+  
 .hero h2{font-size:56px;}
 .hero p{font-size:22px;margin:15px auto 30px;max-width:750px;}
 .btn{background:var(--yellow);color:#000;padding:12px 30px;border-radius:30px;text-decoration:none;font-weight:600;border:none;cursor:pointer;}
@@ -669,16 +674,28 @@ document.getElementById('academyForm').addEventListener('submit', function (e) {
 
 <script>
 const counters=document.querySelectorAll('.counter');
-counters.forEach(counter=>{const update=()=>{const target=+counter.dataset.target;const c=+counter.innerText;const inc=target/200;if(c<target){counter.innerText=Math.ceil(c+inc);setTimeout(update,15)}else{counter.innerText=target}};update()});
+counters.forEach(counter=>{
+  const update=()=>{
+    const target=+counter.dataset.target;
+    const c=+counter.innerText;
+    const inc=target/200;
+    if(c<target){
+      counter.innerText=Math.ceil(c+inc);
+      setTimeout(update,15)
+    }else{
+      counter.innerText=target
+    }
+  };
+  update();
+});
 
-<script>
 const heroImages = [
   "images/hero1.jpg",
   "images/hero2.jpg",
   "images/hero3.jpg",
   "images/hero4.jpg",
   "images/hero5.jpg",
-  "images/hero6.jpg",
+  "images/hero6.jpg"
 ];
 
 let current = 0;
@@ -690,7 +707,7 @@ function changeHero() {
 }
 
 changeHero();
-setInterval(changeHero, 5000); // change every 5 seconds
+setInterval(changeHero, 5000);
 </script>
 
 
