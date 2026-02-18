@@ -39,22 +39,33 @@ nav ul li a:hover{color:var(--yellow);}
 #countdown{position:fixed;bottom:20px;right:20px;background:var(--yellow);padding:14px 22px;border-radius:30px;font-weight:700;} 
 #admin{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);z-index:9999;overflow:auto;} 
 .admin-box{background:#fff;max-width:540px;margin:80px auto;padding:28px;border-radius:16px;} 
+.footer-inside{
+  grid-column:1/-1;
+  margin-top:50px;
+  padding-top:30px;
+  border-top:1px solid rgba(255,255,255,.15);
+  display:flex;
+  align-items:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.footer-logo img{
+  width:70px;
+}
+
+.footer-info{
+  color:#fff;
+  font-size:14px;
+}
+
 .footer-title{
-  margin-top:12px;
   font-weight:600;
-  letter-spacing:0.5px;
+  margin-top:8px;
 }
 
 .footer-contact p{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin:6px 0;
-  font-size:15px;
-}
-
-.footer-contact .icon{
-  font-size:18px;
+  margin:4px 0;
 }
 
 @keyframes fadeUp{
@@ -401,37 +412,7 @@ Structured coaching, elite environment, and real match opportunities for serious
 <!-- SOCIAL MEDIA HANDLES -->
 <section id="social" class="section" style="background:var(--light)"><div class="container"><div class="title"><h2>Connect With Us</h2></div><div class="grid"><a class="btn" href="https://www.instagram.com/punjabsporting?igsh=MWNuY3BkamJwMGo1dw==" target="_blank">Instagram</a><a class="btn" href="https://www.facebook.com/share/186Tm57YfQ/?mibextid=wwXIfr" target="_blank">Facebook</a><a class="btn" href="https://www.youtube.com/@PunjabSportingFA" target="_blank">YouTube</a><a class="btn" href="https://x.com/punjabsporting?s=21" target="_blank">Twitter / X</a></div></div></section>
 
-<!--FOOTER-->
-<footer>
-  <div class="container footer-grid">
-
-    <!-- Left: Logo -->
-    <div class="footer-logo">
-      <img src="images/logo.png" alt="Punjab Sporting Academy Logo">
-    </div>
-
-    <!-- Right: Info -->
-    <div class="footer-info">
-      <p>© 2026 Punjab Sporting Academy. All Rights Reserved.</p>
-
-      <p class="footer-title">Contact Us</p>
-      <p>We appreciate your interest.For more details please contact us on below information</p>
-
-      <div class="footer-contact">
-        <p>
-          <span class="icon">📧</span>
-          punjabsportingfa@gmail.com
-        </p>
-        <p>
-          <span class="icon">📞</span>
-          9896599669
-        </p>
-      </div>
-    </div>
-
-  </div>
-</footer>
-
+  
 <div id="countdown"></div>
 
 <div id="admin"><div class="admin-box"><h2>Admin Dashboard</h2><input id="newsTitle" placeholder="News Title"><textarea id="newsDesc" placeholder="News Description"></textarea><button class="btn" onclick="addNews()">Publish News</button><br><br><button class="btn" onclick="closeAdmin()">Close Panel</button></div></div>
@@ -544,6 +525,37 @@ document.getElementById('academyForm').addEventListener('submit', function (e) {
   <div class="stat-box"><span class="counter" data-target="5">0</span><p>Professional Coaches</p></div>
   <div class="stat-box"><span class="counter" data-target="2">0</span><p>National Selections</p></div>
   <div class="stat-box"><span class="counter" data-target="9">0</span><p>Trophies Won</p></div>
+
+<section class="stats-section">
+
+  <!-- Stats -->
+  <div class="stat-box"><span class="counter" data-target="150">0</span><p>Players Trained</p></div>
+  <div class="stat-box"><span class="counter" data-target="5">0</span><p>Professional Coaches</p></div>
+  <div class="stat-box"><span class="counter" data-target="2">0</span><p>National Selections</p></div>
+  <div class="stat-box"><span class="counter" data-target="9">0</span><p>Trophies Won</p></div>
+
+  <!-- Footer inside same blue section -->
+  <div class="footer-inside">
+
+    <div class="footer-logo">
+      <img src="images/logo.png" alt="Punjab Sporting Academy Logo">
+    </div>
+
+    <div class="footer-info">
+      <p>© 2026 Punjab Sporting Academy. All Rights Reserved.</p>
+      <p class="footer-title">Contact Us</p>
+      <p>We appreciate your interest. For more information contact us on below information.</p>
+
+      <div class="footer-contact">
+        <p>📧 punjabsportingfa@gmail.com</p>
+        <p>📞 9896599669</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
 </section>
 
 <style>
