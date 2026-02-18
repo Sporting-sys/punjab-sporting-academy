@@ -44,7 +44,6 @@ nav ul li a:hover{color:var(--yellow);}
   color:#fff;
   padding:40px 20px;
 }
-
 .hero::before{
   content:"";
   position:absolute;
@@ -52,10 +51,11 @@ nav ul li a:hover{color:var(--yellow);}
   background:
     linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
     var(--hero-bg) center/cover no-repeat;
-  animation: zoom 12s ease-in-out infinite alternate;
-  transition: opacity 1s ease-in-out;
+  animation: zoom 20s ease-in-out infinite alternate;
+  transition: background 2.5s ease-in-out;
   z-index:0;
 }
+
 .hero > div{
   position:relative;
   z-index:2;
@@ -707,7 +707,7 @@ function changeHero() {
 }
 
 changeHero();
-setInterval(changeHero, 5000);
+setInterval(changeHero, 8000);
 </script>
 
 
