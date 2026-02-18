@@ -110,38 +110,60 @@ Structured coaching, elite environment, and real match opportunities for serious
 <section id="trophies" class="section" style="background:var(--light)">
   <div class="container">
     <div class="title"><h2>🏆 Trophy Cabinet</h2></div>
-    <div class="trophy-cabinet" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px">
-    <div class="trophy" style="padding:30px 20px;border-radius:16px;text-align:center;color:#fff;transition:.4s;position:relative;overflow:hidden">
-        <img src="images/trophy1.jpg" style="width:90px;animation:spin 6s linear infinite;filter:drop-shadow(0 0 10px gold)">
-        <span style="display:block;margin-top:10px;font-weight:700;color:#f6c300">National Youth State Champions Goa</span>
-        <div class="popup" style="position:absolute;bottom:-100%;left:0;width:100%;background:#000;padding:12px;font-size:13px;transition:.4s">2024 – Punjab League</div>
+
+    <div class="trophy-cabinet" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px">
+
+      <div class="trophy">
+        <img src="images/trophy1.png">
+        <span>National Youth State Champions Goa</span>
       </div>
-      <div class="trophy" style="background:#081f36;padding:30px 20px;border-radius:16px;text-align:center;color:#fff;box-shadow:0 0 25px rgba(255,215,0,.45);transition:.4s;position:relative;overflow:hidden">
-        <img src="images/trophy2.jpg" style="width:90px;animation:spin 6s linear infinite;filter:drop-shadow(0 0 10px gold)">
-        <span style="display:block;margin-top:10px;font-weight:700;color:#f6c300">State Champions</span>
-        <div class="popup" style="position:absolute;bottom:-100%;left:0;width:100%;background:#000;padding:12px;font-size:13px;transition:.4s">2023 – AIFF Youth</div>
+
+      <div class="trophy">
+        <img src="images/trophy2.png">
+        <span>State Champions</span>
       </div>
-      <div class="trophy" style="background:#081f36;padding:30px 20px;border-radius:16px;text-align:center;color:#fff;box-shadow:0 0 25px rgba(255,215,0,.45);transition:.4s;position:relative;overflow:hidden">
-        <img src="images/trophy3.jpg" style="width:90px;animation:spin 6s linear infinite;filter:drop-shadow(0 0 10px gold)">
-        <span style="display:block;margin-top:10px;font-weight:700;color:#f6c300">Elite National Cup</span>
-        <div class="popup" style="position:absolute;bottom:-100%;left:0;width:100%;background:#000;padding:12px;font-size:13px;transition:.4s">2025 – AIFF Elite</div>
+
+      <div class="trophy">
+        <img src="images/trophy3.png">
+        <span>Elite National Cup</span>
       </div>
-      <div class="trophy" style="background:#081f36;padding:30px 20px;border-radius:16px;text-align:center;color:#fff;box-shadow:0 0 25px rgba(255,215,0,.45);transition:.4s;position:relative;overflow:hidden">
-        <img src="https://cdn-icons-png.flaticon.com/512/2583/2583344.png" style="width:90px;animation:spin 6s linear infinite;filter:drop-shadow(0 0 10px gold)">
-        <span style="display:block;margin-top:10px;font-weight:700;color:#f6c300">International Cup</span>
-        <div class="popup" style="position:absolute;bottom:-100%;left:0;width:100%;background:#000;padding:12px;font-size:13px;transition:.4s">2024 – Dubai Tour</div>
-      </div>
+
     </div>
   </div>
 </section>
 
 <style>
 @keyframes spin{
-  0%{transform:rotateY(0deg) rotateZ(0deg)}
-  50%{transform:rotateY(180deg) rotateZ(5deg)}
-  100%{transform:rotateY(360deg) rotateZ(0deg)}
+  0%{transform:rotateY(0deg)}
+  100%{transform:rotateY(360deg)}
 }
-.trophy:hover{transform:scale(1.05)}
+
+.trophy{
+  background:transparent;
+  box-shadow:none;
+  text-align:center;
+}
+
+.trophy img{
+  width:160px;   /* increase size */
+  height:auto;
+  object-fit:contain;
+  animation:spin 6s linear infinite;
+  filter:drop-shadow(0 0 12px rgba(255,215,0,.9));
+}
+
+.trophy span{
+  display:block;
+  margin-top:12px;
+  font-weight:600;
+  color:var(--navy);
+}
+
+.trophy-cabinet{
+  align-items:center;
+}
+
+.trophy:hover{transform:scale(1.08)}
 .trophy:hover .popup{bottom:0}
 </style>
 </section>
