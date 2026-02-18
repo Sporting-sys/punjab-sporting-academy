@@ -39,51 +39,38 @@ nav ul li a:hover{color:var(--yellow);}
 #countdown{position:fixed;bottom:20px;right:20px;background:var(--yellow);padding:14px 22px;border-radius:30px;font-weight:700;} 
 #admin{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);z-index:9999;overflow:auto;} 
 .admin-box{background:#fff;max-width:540px;margin:80px auto;padding:28px;border-radius:16px;} 
-.footer-bar{
-  background:#071c2f;
-  padding:40px 8%;
+.footer-layout{
   display:grid;
-  grid-template-columns:1fr 2fr 1fr;
-  gap:30px;
-  align-items:center;
-  color:#fff;
+  grid-template-columns:260px 1fr;
+  align-items:flex-start;
+}
+
+.footer-left{
+  text-align:left;
 }
 
 .footer-left img{
-  width:70px;
+  width:90px;
+  margin-bottom:15px;
 }
 
-.footer-stats{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
-}
-
-.footer-right{
-  text-align:right;
+.footer-contact p{
+  margin:4px 0;
   font-size:14px;
 }
 
-.footer-title{
-  font-size:18px;
-  font-weight:600;
-  margin-bottom:6px;
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
 }
 
 .copyright{
-  margin-top:10px;
-  font-size:12px;
-  opacity:.8;
-}
-
-/* Mobile Responsive */
-@media(max-width:900px){
-  .footer-bar{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-  .footer-right{text-align:center;}
-  .footer-stats{grid-template-columns:repeat(2,1fr);}
+  text-align:center;
+  background:#071c2f;
+  color:#fff;
+  padding-bottom:30px;
+  font-size:14px;
 }
 
 @keyframes fadeUp{
@@ -538,28 +525,32 @@ document.getElementById('academyForm').addEventListener('submit', function (e) {
 </a>
 
 <!-- Stats Counter Section -->
-<section class="footer-bar">
+<section class="stats-section footer-layout">
 
-  <!-- Left Logo -->
+  <!-- LEFT PANEL -->
   <div class="footer-left">
-    <img src="images/logo.png" alt="Punjab Sporting Academy">
+    <img src="images/logo.png" alt="Punjab Sporting Academy Logo">
+
+    <div class="footer-contact">
+      <p>We appreciate your interest. For more details, please contact us on below information. </p>
+      <p>📧 punjabsportingfa@gmail.com</p>
+      <p>📞 9896599669</p>
+    </div>
   </div>
 
-  <!-- Center Stats -->
-  <div class="footer-stats">
-    <div class="stat-box"><span class="counter" data-target="150">0</span><p>Players</p></div>
-    <div class="stat-box"><span class="counter" data-target="5">0</span><p>Coaches</p></div>
-    <div class="stat-box"><span class="counter" data-target="2">0</span><p>National</p></div>
-    <div class="stat-box"><span class="counter" data-target="9">0</span><p>Trophies</p></div>
+  <!-- RIGHT PANEL -->
+  <div class="stats-grid">
+    <div class="stat-box"><span class="counter" data-target="150">0</span><p>Players Trained</p></div>
+    <div class="stat-box"><span class="counter" data-target="5">0</span><p>Professional Coaches</p></div>
+    <div class="stat-box"><span class="counter" data-target="2">0</span><p>National Selections</p></div>
+    <div class="stat-box"><span class="counter" data-target="9">0</span><p>Trophies Won</p></div>
   </div>
 
-  <!-- Right Contact -->
-  <div class="footer-right">
-    <p class="footer-title">Contact Us</p>
-    <p>📧 punjabsportingfa@gmail.com</p>
-    <p>📞 9896599669</p>
-    <p class="copyright">© 2026 Punjab Sporting Academy</p>
-  </div>
+</section>
+
+<div class="copyright">
+  © 2026 Punjab Sporting Academy. All Rights Reserved.
+</div>
 
 </section>
 
