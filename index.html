@@ -52,14 +52,19 @@ nav ul li a:hover{color:var(--yellow);}
     linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
     var(--hero-bg) center/cover no-repeat;
   animation: zoom 20s ease-in-out infinite alternate;
-  transition: background 2.5s ease-in-out;
   z-index:0;
+}
+
+@keyframes zoom{
+  from{transform:scale(1)}
+  to{transform:scale(1.1)}
 }
 
 .hero > div{
   position:relative;
   z-index:2;
 }
+  
   
 .hero h2{font-size:56px;}
 .hero p{font-size:22px;margin:15px auto 30px;max-width:750px;}
