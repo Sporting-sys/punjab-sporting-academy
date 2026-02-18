@@ -39,9 +39,22 @@ nav ul li a:hover{color:var(--yellow);}
 #countdown{position:fixed;bottom:20px;right:20px;background:var(--yellow);padding:14px 22px;border-radius:30px;font-weight:700;} 
 #admin{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);z-index:9999;overflow:auto;} 
 .admin-box{background:#fff;max-width:540px;margin:80px auto;padding:28px;border-radius:16px;} 
-footer{background:#061e36;color:#fff;padding:60px 20px;} 
-.section{
-  animation: fadeUp 0.9s ease both;
+.footer-title{
+  margin-top:12px;
+  font-weight:600;
+  letter-spacing:0.5px;
+}
+
+.footer-contact p{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:6px 0;
+  font-size:15px;
+}
+
+.footer-contact .icon{
+  font-size:18px;
 }
 
 @keyframes fadeUp{
@@ -390,12 +403,31 @@ Structured coaching, elite environment, and real match opportunities for serious
 
 <!--FOOTER-->
 <footer>
-  <div class="container">
-    <p>© 2024 Punjab Sporting Academy</p>
+  <div class="container footer-grid">
 
-    <p style="margin-top:15px;">Contact us:</p>
-    <p>Email: punjabsportingfa@gmail.com</p>
-    <p>Phone: 9896599669</p>
+    <!-- Left: Logo -->
+    <div class="footer-logo">
+      <img src="images/logo.png" alt="Punjab Sporting Academy Logo">
+    </div>
+
+    <!-- Right: Info -->
+    <div class="footer-info">
+      <p>© 2024 Punjab Sporting Academy</p>
+
+      <p class="footer-title">Contact Us</p>
+
+      <div class="footer-contact">
+        <p>
+          <span class="icon">📧</span>
+          punjabsportingfa@gmail.com
+        </p>
+        <p>
+          <span class="icon">📞</span>
+          9896599669
+        </p>
+      </div>
+    </div>
+
   </div>
 </footer>
 
