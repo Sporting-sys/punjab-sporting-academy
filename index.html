@@ -39,33 +39,51 @@ nav ul li a:hover{color:var(--yellow);}
 #countdown{position:fixed;bottom:20px;right:20px;background:var(--yellow);padding:14px 22px;border-radius:30px;font-weight:700;} 
 #admin{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);z-index:9999;overflow:auto;} 
 .admin-box{background:#fff;max-width:540px;margin:80px auto;padding:28px;border-radius:16px;} 
-.footer-inside{
-  grid-column:1/-1;
-  margin-top:50px;
-  padding-top:30px;
-  border-top:1px solid rgba(255,255,255,.15);
-  display:flex;
-  align-items:center;
+.footer-bar{
+  background:#071c2f;
+  padding:40px 8%;
+  display:grid;
+  grid-template-columns:1fr 2fr 1fr;
   gap:30px;
-  flex-wrap:wrap;
+  align-items:center;
+  color:#fff;
 }
 
-.footer-logo img{
+.footer-left img{
   width:70px;
 }
 
-.footer-info{
-  color:#fff;
+.footer-stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.footer-right{
+  text-align:right;
   font-size:14px;
 }
 
 .footer-title{
+  font-size:18px;
   font-weight:600;
-  margin-top:8px;
+  margin-bottom:6px;
 }
 
-.footer-contact p{
-  margin:4px 0;
+.copyright{
+  margin-top:10px;
+  font-size:12px;
+  opacity:.8;
+}
+
+/* Mobile Responsive */
+@media(max-width:900px){
+  .footer-bar{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  .footer-right{text-align:center;}
+  .footer-stats{grid-template-columns:repeat(2,1fr);}
 }
 
 @keyframes fadeUp{
@@ -520,43 +538,31 @@ document.getElementById('academyForm').addEventListener('submit', function (e) {
 </a>
 
 <!-- Stats Counter Section -->
-<section class="stats-section">
-  <div class="stat-box"><span class="counter" data-target="150">0</span><p>Players Trained</p></div>
-  <div class="stat-box"><span class="counter" data-target="5">0</span><p>Professional Coaches</p></div>
-  <div class="stat-box"><span class="counter" data-target="2">0</span><p>National Selections</p></div>
-  <div class="stat-box"><span class="counter" data-target="9">0</span><p>Trophies Won</p></div>
+<section class="footer-bar">
 
-<section class="stats-section">
+  <!-- Left Logo -->
+  <div class="footer-left">
+    <img src="images/logo.png" alt="Punjab Sporting Academy">
+  </div>
 
-  <!-- Stats -->
-  <div class="stat-box"><span class="counter" data-target="150">0</span><p>Players Trained</p></div>
-  <div class="stat-box"><span class="counter" data-target="5">0</span><p>Professional Coaches</p></div>
-  <div class="stat-box"><span class="counter" data-target="2">0</span><p>National Selections</p></div>
-  <div class="stat-box"><span class="counter" data-target="9">0</span><p>Trophies Won</p></div>
+  <!-- Center Stats -->
+  <div class="footer-stats">
+    <div class="stat-box"><span class="counter" data-target="150">0</span><p>Players</p></div>
+    <div class="stat-box"><span class="counter" data-target="5">0</span><p>Coaches</p></div>
+    <div class="stat-box"><span class="counter" data-target="2">0</span><p>National</p></div>
+    <div class="stat-box"><span class="counter" data-target="9">0</span><p>Trophies</p></div>
+  </div>
 
-  <!-- Footer inside same blue section -->
-  <div class="footer-inside">
-
-    <div class="footer-logo">
-      <img src="images/logo.png" alt="Punjab Sporting Academy Logo">
-    </div>
-
-    <div class="footer-info">
-      <p>© 2026 Punjab Sporting Academy. All Rights Reserved.</p>
-      <p class="footer-title">Contact Us</p>
-      <p>We appreciate your interest. For more information contact us on below information.</p>
-
-      <div class="footer-contact">
-        <p>📧 punjabsportingfa@gmail.com</p>
-        <p>📞 9896599669</p>
-      </div>
-    </div>
-
+  <!-- Right Contact -->
+  <div class="footer-right">
+    <p class="footer-title">Contact Us</p>
+    <p>📧 punjabsportingfa@gmail.com</p>
+    <p>📞 9896599669</p>
+    <p class="copyright">© 2026 Punjab Sporting Academy</p>
   </div>
 
 </section>
 
-</section>
 
 <style>
 .stats-section{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:70px 10%;background:#071c2f;color:#fff;text-align:center}
