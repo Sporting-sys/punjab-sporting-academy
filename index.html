@@ -493,7 +493,10 @@ Structured coaching, elite environment, and real match opportunities for serious
 </div></section>
 
 <!-- ACADEMY -->
-<section id="academy" class="section"><div class="container"><div class="title"><h2>Academy Admission & Trial Registration</h2><p>Fill complete details to register for official Punjab Sporting Academy trials.</p></div><form id="academyForm" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px"><input placeholder="Full Name" required><input type="text" placeholder="DOB (MM/DD/YYYY)" required onfocus="this.type='date'" onblur="if(this.value===''){this.type='text'}"><input placeholder="Age" required><input placeholder="Height (cm)"><input placeholder="Weight (kg)"><input placeholder="Playing Position" required><select required><option value="">Preferred Foot</option><option>Right</option><option>Left</option><option>Both</option></select><input placeholder="Mobile Number" required><input placeholder="Email Address" required><input placeholder="City" required><input placeholder="Previous Club / Academy"><input placeholder="Years of Playing Experience"><input type="date" min="2026-01-01" required><select required><option value="">Preferred Time Slot</option>
+<section id="academy" class="section"><div class="container"><div class="title"><h2>Academy Admission & Trial Registration</h2><p>Fill complete details to register for official Punjab Sporting Academy trials.</p></div><form id="academyForm" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px"><input placeholder="Full Name" required><input type="text" placeholder="DOB (MM/DD/YYYY)" required onfocus="this.type='date'" onblur="if(this.value===''){this.type='text'}"><input placeholder="Age" required><input placeholder="Height (cm)"><input placeholder="Weight (kg)"><input placeholder="Playing Position" required><select required><option value="">Preferred Foot</option><option>Right</option><option>Left</option><option>Both</option></select><input placeholder="Mobile Number" required><input placeholder="Email Address" required><input placeholder="City" required><input placeholder="Previous Club / Academy"><input placeholder="Years of Playing Experience"><div>
+<label for="trialDate">Preferred Trial Date</label>
+<input type="date" id="trialDate" required>
+</div><select required><option value="">Preferred Time Slot</option>
 <option>6:00 AM – 8:00 AM</option>
 <option>4:00 PM – 6:00 PM</option>
 <option>6:00 PM – 8:00 PM</option>
@@ -561,6 +564,11 @@ Structured coaching, elite environment, and real match opportunities for serious
 <div id="admin"><div class="admin-box"><h2>Admin Dashboard</h2><input id="newsTitle" placeholder="News Title"><textarea id="newsDesc" placeholder="News Description"></textarea><button class="btn" onclick="addNews()">Publish News</button><br><br><button class="btn" onclick="closeAdmin()">Close Panel</button></div></div>
 
 <script>
+  // TO DISABLE PREVIOUS YEAR CALENDER IN PREFERRED TRIAL DATE IN FORM
+
+  // Disable past dates automatically
+const today = new Date().toISOString().split("T")[0];
+document.getElementById("trialDate").setAttribute("min", today);
   
 // PLAYER DATABASE
 const players=[
