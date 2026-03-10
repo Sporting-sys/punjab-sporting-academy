@@ -196,12 +196,48 @@ background:#fff;
 height:70px;
 resize:vertical;
 }
-  
+
+/* TRAINING GALLERY */
+.training-gallery{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+z-index:99999;
+padding:60px;
+overflow:auto;
+}
+
+.training-gallery img{
+width:280px;
+margin:10px;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.training-gallery img:hover{
+transform:scale(1.08);
+}
+
+.gallery-close{
+position:absolute;
+top:20px;
+right:40px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+
 /* Brand hover colors */
 .instagram:hover{background:#e1306c;color:#fff;}
 .facebook:hover{background:#1877f2;color:#fff;}
 .youtube:hover{background:#ff0000;color:#fff;}
 .twitter:hover{background:#000;color:#fff;}
+
 
 </style>
 </head>
@@ -528,8 +564,24 @@ required>
 <input placeholder="Parent / Guardian Name" required><input placeholder="Emergency Contact Number" required><textarea placeholder="Medical Conditions (if any)" style="grid-column:1/-1"></textarea><label style="grid-column:1/-1"><input type="checkbox" required> I confirm that the above information is correct.</label><button class="btn" style="grid-column:1/-1">Submit Trial Registration</button></form></div></section>
 
 <!-- MATCH GALLERY & HIGHLIGHTS -->
-<section id="gallery" class="section" style="background:var(--light)"><div class="container"><div class="title"><h2>Match Gallery & Highlights</h2></div><div class="grid"><div class="card"><img src="images/g1.jpg"><div style="padding:16px"><h3>Highlights</h3><p>Watch match-winning goals & moments</p><a class="btn" href="https://youtube.com/@punjabsportingfa?si=oGOD7wa25qNGV_dS" target="_blank">Watch Video</a></div></div><div class="card"><img src="images/g2.jpg"><div style="padding:16px"><h3>Training Session</h3><p>Inside the academy drills</p></div></div><div class="card"><img src="images/g3.jpg"><div style="padding:16px"><h3>Matchday Atmosphere</h3></div></div></div></div></section>
+<section id="gallery" class="section" style="background:var(--light)"><div class="container"><div class="title"><h2>Match Gallery & Highlights</h2></div><div class="grid"><div class="card"><img src="images/g1.jpg"><div style="padding:16px"><h3>Highlights</h3><p>Watch match-winning goals & moments</p><a class="btn" href="https://youtube.com/@punjabsportingfa?si=oGOD7wa25qNGV_dS" target="_blank">Watch Video</a></div></div><div class="card"><img src="images/g2.jpg"><div style="padding:16px"><h3>Training Session</h3><p>Inside the academy drills</p><a class="btn" onclick="openTrainingGallery()">View Gallery</a></div></div><div class="card"><img src="images/g3.jpg"><div style="padding:16px"><h3>Matchday Atmosphere</h3></div></div></div></div></section>
 
+<!-- TRAINING GALLERY POPUP -->
+<div id="trainingGallery" class="training-gallery">
+
+<span class="gallery-close" onclick="closeTrainingGallery()">×</span>
+
+<img src="images/training1.jpg">
+<img src="images/training2.jpg">
+<img src="images/training3.jpg">
+<img src="images/training4.jpg">
+<img src="images/training5.jpg">
+<img src="images/training6.jpg">
+<img src="images/training7.jpg">
+<img src="images/training8.jpg">
+<img src="images/training9.jpg">
+</div>
+  
 <!-- ACADEMY HISTORY TIMELINE -->
 <section id="history" class="section" style="background:var(--light)"><div class="container"><div class="title"><h2>Academy History Timeline</h2></div><div class="grid"><div class="card"><div style="padding:20px"><h3>2024 – Foundation</h3><p>Punjab Sporting Academy was founded to nurture grassroots football talent.</p></div></div><div class="card"><div style="padding:20px"><h3>2025 – First State Title</h3><p>Won our first Punjab State Championship.</p></div></div><div class="card"><div style="padding:20px"><h3>2026 – National Recognition</h3><p>Player selected for national camps & ISL youth teams.</p></div></div><div class="card"><div style="padding:20px"><h3>2026 – Academy Status</h3><p>Entering in youth league this season.</p></div></div></div></div></section>
 
@@ -787,6 +839,16 @@ function changeHero() {
 
 changeHero();
 setInterval(changeHero, 8000);
+
+// TRAINING GALLERY
+function openTrainingGallery(){
+document.getElementById("trainingGallery").style.display="block";
+}
+
+function closeTrainingGallery(){
+document.getElementById("trainingGallery").style.display="none";
+}
+
 </script>
 
 
