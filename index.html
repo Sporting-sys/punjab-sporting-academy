@@ -318,7 +318,7 @@ Structured coaching, elite environment, and real match opportunities for serious
 <section id="achievements" class="section"><div class="container"><div class="title"><h2>Achievements</h2></div><div class="grid"><div class="stat"><h2>3+</h2><p>State Championships</p></div><div class="stat"><h2>1</h2><p>National Titles</p></div><div class="stat"><h2>20+</h2><p>Youth Tournaments</p></div><div class="stat"><h2>3+</h2><p>Tours</p></div></div></div></section>
 
 <!-- ACADEMY IDENTITY -->
-<section id="identity" class="section" style="background:var(--light)"><div class="container"><div class="title"><h2>Our Identity</h2></div><div class="grid"><div class="card"><div style="padding:22px"><h3>Mission Statement</h3><p>To develop technically sound, mentally strong, and disciplined footballers by providing world-class coaching, structured development pathways, and a professional football environment.</p></div></div><div class="card"><div style="padding:22px"><h3>Vision Statement</h3><p>To become one of India’s most respected football academies and professional clubs, producing national and international level players who represent excellence, integrity, and sportsmanship.</p></div></div><div class="card"><div style="padding:22px"><h3>Academy Philosophy</h3><p>We believe in long-term player development, intelligent football, tactical discipline, and building character both on and off the pitch.</p></div></div><div class="card"><div style="padding:22px"><h3>Academy Motto</h3>Developing Champions. Creating Legends.</p></p></div></div></div></div></section>
+<section id="identity" class="section" style="background:var(--light)"><div class="container"><div class="title"><h2>Our Identity</h2></div><div class="grid"><div class="card"><div style="padding:22px"><h3>Mission Statement</h3><p>To develop technically sound, mentally strong, and disciplined footballers by providing world-class coaching, structured development pathways, and a professional football environment.</p></div></div><div class="card"><div style="padding:22px"><h3>Vision Statement</h3><p>To become one of India’s most respected football academies and professional clubs, producing national and international level players who represent excellence, integrity, and sportsmanship.</p></div></div><div class="card"><div style="padding:22px"><h3>Academy Philosophy</h3><p>We believe in long-term player development, intelligent football, tactical discipline, and building character both on and off the pitch.</p></div></div><div class="card"><div style="padding:22px"><h3>Academy Motto</h3><p>Developing Champions, Creating pathways for young guns.</p></div></div></div></div></section>
 
 <!-- CORE VALUES -->
 <section id="values" class="section"><div class="container"><div class="title"><h2>Our Core Values</h2></div><div class="grid"><div class="stat"><h3>Discipline</h3><p>Building strong habits and professional behavior.</p></div><div class="stat"><h3>Respect</h3><p>For teammates, opponents, coaches, and the game.</p></div><div class="stat"><h3>Integrity</h3><p>Honesty, ethics, and fairness in everything we do.</p></div><div class="stat"><h3>Excellence</h3><p>Continuous improvement and elite performance.</p></div><div class="stat"><h3>Teamwork</h3><p>Winning together and growing together.</p></div></div></div></section>
@@ -515,9 +515,11 @@ Structured coaching, elite environment, and real match opportunities for serious
 
 <!-- ACADEMY -->
 <section id="academy" class="section"><div class="container"><div class="title"><h2>Academy Admission & Trial Registration</h2><p>Fill complete details to register for official Punjab Sporting Academy trials.</p></div><form id="academyForm" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px"><input placeholder="Full Name" required><input type="text" placeholder="DOB (MM/DD/YYYY)" required onfocus="this.type='date'" onblur="if(this.value===''){this.type='text'}"><input placeholder="Age" required><input placeholder="Height (cm)"><input placeholder="Weight (kg)"><input placeholder="Playing Position" required><select required><option value="">Preferred Foot</option><option>Right</option><option>Left</option><option>Both</option></select><input placeholder="Mobile Number" required><input placeholder="Email Address" required><input placeholder="City" required><input placeholder="Previous Club / Academy"><input placeholder="Years of Playing Experience">
-<label for="trialDate">Preferred Trial Date</label>
-<input type="date" id="trialDate" name="trialDate" required>
-<p id="selectedDateText" style="font-size:12px;color:#555;"></p>
+<input type="text" id="trialDate"
+placeholder="Preferred Trial Date"
+onfocus="this.type='date'"
+onblur="if(this.value===''){this.type='text'}"
+required>
 <select required><option value="">Preferred Time Slot</option>
 <option>6:00 AM – 8:00 AM</option>
 <option>4:00 PM – 6:00 PM</option>
@@ -589,10 +591,11 @@ Structured coaching, elite environment, and real match opportunities for serious
   // TO DISABLE PREVIOUS YEAR CALENDER IN PREFERRED TRIAL DATE IN FORM
 
 // Disable past dates automatically
-const today = new Date().toISOString().split("T")[0];
 const trialInput = document.getElementById("trialDate");
 
-trialInput.setAttribute("min", today);
+trialInput.addEventListener("focus", function(){
+  this.min = new Date().toISOString().split("T")[0];
+});
 
 // Show selected date
 trialInput.addEventListener("change", function(){
